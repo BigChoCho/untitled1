@@ -23,6 +23,7 @@ class qqscray(scrapy.Spider):
         dicts=dicts['Data']
         #此key對應的是list類型的值
         dicts=dicts['Posts']
+        print("時間搓",time.time())
 
         print("_________________"*5)
         #藉由無頭瀏覽器獲取動態js
