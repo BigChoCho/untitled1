@@ -15,6 +15,7 @@ class qqscray(scrapy.Spider):
         'https://careers.tencent.com/tencentcareer/api/post/Query?timestamp=1557895020042&countryId=1&cityId=&bgIds=&productId=&categoryId=&parentCategoryId=&attrId=&keyword=&pageIndex=1&pageSize=10&language=zh-cn&area=us'
     ]
     def parse(self, response):
+        time.sleep(20)
         print("為何沒咚咚")
         #decode=解碼encode=編碼,json.loads轉成字典類型
         dicts=json.loads(response.body.decode().encode('utf-8'))
@@ -64,13 +65,14 @@ class qqscray(scrapy.Spider):
             url = response.url.replace("Index=1", "Index=" + str(page))
             print(url)
 
-            time.sleep(10)
             # 把地址通过yield返回
             # 注意callback的写法
             #處理完再調用parse函數,並且把url回傳response
-            yield scrapy.Request(url,callback=self.parse)
+
 
             yield item
+        yield scrapy.Request(url, callback=self.parse)
+
 
 
 
