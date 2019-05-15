@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>複習</title>
+    </head>
+    <body>
+        <!--連結標籤 a標籤-->
+        <!--本地路徑,建議用相對路徑./當前  ../上目錄-->
+        <a href="https://www.google.com.tw/webhp?hl=zh-TW">google</a><br>
+        <a href="./1.html">跳轉到本地的文件</a><br>
+        <!--圖片標籤,src圖片地址,alt加仔失敗所顯示的,title鼠標提示訊息width寬度hight高度,單一設置會自動拉伸-->
+        <img src="https://cdn2.ettoday.net/images/2417/d2417334.jpg"width="200px" height="100px" alt="圖片標籤"title="美女高清圖哦哦"><br>
+        <!--本地存取圖-->
+        <img src="./images/P2050222.JPG"width="200px" height="100px" alt="圖標" title="牛森森"><br>
+        1>2
+        <!--form表單標籤 action 數據的提交地址 method 提交方式 enctype 表單有文件上傳必須添加的屬性 multipart/form-data 文件轉碼用-->
+        <!--post 不通過url地址傳參 隱藏數據-->
+        <form action="" method="post" enctype="multipart/form-data">
+            <!--普通文本輸入框 name存你的名字-->
+            用戶名: <input type="text" name="username" value="1234"><br>
+            用戶名text: <input type="text" name="username" value="只給看不給改" readonly><br>
+            用戶名: <input type="text" name="username" value="" placeholder="請輸入用戶名"><br>
+            密碼:<input type="password" name="password">
+            性別:<input type="radio" name="sex"value="1">男
+             <input type="radio" name="sex"value="0">女
+             <input type="radio" name="sex"value="3">中性<br>
+            興趣:<input type="checkbox" name="sex1" value="7">打球
+             <input type="checkbox" name="love[]" value="4">稿機
+             <input type="checkbox" name="love[]"value="5">打基
+             <input type="checkbox" name="love[]" value="6">睡覺
+             <input type="checkbox" name="love[]" value="8">其他: <input type="text" name="username" value="08"><br>
+            學歷:<br>
+            <select name="x1">
+                <option value="1">小學</option>
+                <option value="2">中學</option>
+                <option value="3">大學</option>
+
+            </select><br>
+            <!--文件上傳-->
+            上傳文件:<input type="file" name="file"><br>
+            自傳:<br>
+            <textarea name="text" id="">輸入內容</textarea>
+            <br>
+            <!--提交按鈕-->
+            <input type="submit" value="確定送出"><br>
+            <!--disabled 禁用屬性-->
+            <button disabled>按鈕</button>
+            <br>
+            <!--重置-->
+            <input type="reset">
+            <!--隱藏域-->
+            <input type="hidden" name="id" value="0">
+
+
+
+
+
+
+        </form>
+
+    </body>
+</html>

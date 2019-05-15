@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<bookstore>
+    <!--一本書分別為,姓名,作者,日期,price-->
+    <book categor="cppking">
+        <title lang="en">Everday Italian</title>
+        <authoe>Gidada DE</authoe>
+        <year>2018</year>
+        <price>23</price>
+    </book>
+     <book categor="cood">
+        <title lang="en">Everday Italian</title>
+        <authoe>python</authoe>
+        <year>2018</year>
+        <price>34</price>
+    </book>
+     <book categor="horus">
+        <title lang="en">niki</title>
+        <authoe>DEBox</authoe>
+        <year>2002</year>
+        <price>100</price>
+    </book>
+
+</bookstore>

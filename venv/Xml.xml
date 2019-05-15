@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<Class type="class" loc = "TW">
+    <!--注釋哦-->
+    <Student type = "people" >
+        <name>haha</name>
+        <age>18</age>
+    </Student>
+    <Student>
+        <name>haha</name>
+        <age>18</age>
+    </Student>
+    <Student>
+        <name>haha</name>
+        <age>18</age>
+    </Student>
+</Class>

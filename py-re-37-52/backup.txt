@@ -1,0 +1,8 @@
+C:\Users\a3858\PycharmProjects\untitled1\py-re-37-52\1223.txt
+C:\Users\a3858\PycharmProjects\untitled1\py-re-37-52\1234.txt
+C:\Users\a3858\PycharmProjects\untitled1\py-re-37-52\backup.txt
+C:\Users\a3858\PycharmProjects\untitled1\py-re-37-52\tast.txt
+C:\Users\a3858\PycharmProjects\untitled1\py-re-37-52\test--1
+C:\Users\a3858\PycharmProjects\untitled1\py-re-37-52\test--1\__init__.py
+C:\Users\a3858\PycharmProjects\untitled1\py-re-37-52\test.py
+C:\Users\a3858\PycharmProjects\untitled1\py-re-37-52\__init__.py

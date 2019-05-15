@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>偽類選擇器</title>
+    <style>
+    /*鼠標璇停慘生變化*/
+        .box{
+         width:200px;
+    height:200px;
+    background-color:red;
+    }
+    .box:hover{
+        background-color:green;
+        }
+    /*在元素尾部插入內容*/
+      .box:after{
+        content:"ll";
+        }
+     /*在元素頭部插入內容*/
+     .box:before{
+        content:"coco";
+        }
+    </style>
+</head>
+<body>
+    <div class="box">love</div>
+</body>
+</html>
