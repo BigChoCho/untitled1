@@ -7,6 +7,7 @@ from lxml import etree
 import json
 
 class qqscray(scrapy.Spider):
+    print("啟動囉")
     name = "qqspider"
     # 设置只能爬去腾讯域名的信息
     allowed_domains = ['hr.tencent.com']
@@ -71,7 +72,8 @@ class qqscray(scrapy.Spider):
 
 
             yield item
-        yield scrapy.Request(url, callback=self.parse)
+            #dont_filter=True使requests 不被过滤:回調用
+        yield scrapy.Request(url, dont_filter=True,callback=self.parse)
 
 
 
