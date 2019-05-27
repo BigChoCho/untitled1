@@ -14,8 +14,8 @@ time.sleep(10)
 #切換密碼頁
 driver.find_element_by_xpath("//li[@class='account-tab-account']").click()
 time.sleep(5)
-driver.find_element_by_id("username").send_keys("+886972956007")
-driver.find_element_by_id("password").send_keys("menpizzerpower")
+driver.find_element_by_id("username").send_keys("+8869xxxx7")
+driver.find_element_by_id("password").send_keys("menxxxxxower")
 driver.find_element_by_xpath("//a[@class='btn btn-account btn-active']").click()
 
 driver.save_screenshot("spider-re-72.png")
