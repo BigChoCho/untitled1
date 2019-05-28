@@ -1,6 +1,6 @@
 import pymysql
 
-db = pymysql.connect('192.168.1.114', 'debian-sys-maint', "RqvDUeS3K4jrXUoC",'ceshi')
+db = pymysql.connect('0.0.1.0', 'debian-sys-maint', "RqvDUeS3K4jrXUoC",'ceshi')
 print(db)
 #創見游標對數據進行操作
 cursor = db.cursor()
