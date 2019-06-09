@@ -1,12 +1,12 @@
 import pymysql
 
-db = pymysql.connect('0.0.1.0', 'debian-sys-maint', "RqvDUeS3K4jrXUoC",'ceshi')
+db = pymysql.connect('127.0.0.1', 'popo', "111",'mysql_3')
 print(db)
 #創見游標對數據進行操作
 cursor = db.cursor()
-#進行查詢
-cursor.execute('select * from BJT')
-#接收數據
+#進行mysql的指令語法操作
+cursor.execute('SHOW TABLES')
+#接收所有數據
 data =cursor.fetchall()
 for i in data:
     print(i)
