@@ -11,7 +11,7 @@ from selenium.webdriver.common.keys import Keys
 
 # 操作一個瀏覽器建立實例(按照環境變量尋找相應瀏覽器)
 #如果沒有需要指定位置
-driver = webdriver.Chrome(r'C:\Users\a3858\PycharmProjects\untitled1\chromedriver.exe')
+driver = webdriver.Chrome()
 
 driver.get("https://www.baidu.com/")
 

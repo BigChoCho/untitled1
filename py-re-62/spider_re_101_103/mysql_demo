@@ -1,0 +1,84 @@
+__author__="SadClown"
+import pymysql
+
+
+
+class MysqlDemo(object):
+    #連接數據庫實例
+    def __init__(self,host,username,password,dbname):
+        self.conn = pymysql.connect(host,username,password,dbname,charset='utf-8')
+        self.cursor = self.conn.cursor()
+    #獲取數據
+    def GetDatas(self,sql):
+        try:
+
+            #執行//需先定義mysql語法
+            self.cursor.execute(sql)
+            #獲取數據
+            result = self.cursor.fetchall()
+            #成功獲取不抱錯,儲存數據(儲存後不能回滾)
+            self.conn.commit()
+            #回傳
+            return result
+        except Exception as f:
+            #回滾
+            self.conn.rollback()
+            #錯誤信息
+            print(f)
+            return False
+        #獲取單一數據
+    def GetOnly(self,sql):
+        try:
+            # 執行//需先定義mysql語法
+            self.cursor.execute(sql)
+            # 獲取數據
+            result = self.cursor.fetchall()
+            # 成功獲取不抱錯,儲存數據(儲存後不能回滾)
+            self.conn.commit()
+            # 回傳
+            return result
+        except Exception as f:
+            # 回滾
+            self.conn.rollback()
+            # 錯誤信息
+            print(f)
+            return False
+    #插入一條數據//表,字典數據內容
+    def Insert(self,tablename,data):
+        #插入的對象
+
+        #判斷數據為1插入1條數據
+        if len(data.keys())==1:
+            #表名,key,對應的值(之後要修改)
+            sql = 'INSERT INTO {} ({}) VALUES ({})'.format(tablename,data.keys[0],data[0])
+        else:
+            #自行添加
+            pass
+
+    #傳入表名 ,字典,更新的條件
+    def Update(self,table_name,data,restr):
+        data_str=""
+        #字典型遍歷
+        for item in data.items():
+            #轉成str型
+            data_str+='{}="{}",'.format(item[0],item[1])
+            #取道最後一位
+        valuse =data_str[:-1]
+        sql = 'UPDATE {} SET {} WHERE{}'.format(table_name,valuse,restr)
+        try:
+            # 執行//需先定義mysql語法
+            self.cursor.execute(sql)
+            # 成功獲取不抱錯,儲存數據(儲存後不能回滾)
+            self.conn.commit()
+            # 回傳數據
+            return self.cursor.rowcount
+        except Exception as f:
+            # 回滾
+            self.conn.rollback()
+            # 錯誤信息
+            print(f)
+            return False
+        #用完要關哦
+    def Switch(self):
+        self.conn.close()
+        self.cursor.close()
